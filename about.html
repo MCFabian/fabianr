@@ -34,50 +34,34 @@
 
 </head>
 <body class="col-12 about">
+    <div id="overlay"></div>
     <!--< Responsive-Navigations-Element >-->
-    <div id="responsivenav" class="box-shadow-global">
-        <div class="col-8 link-holder">
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="nav-links">home</a></li>
-                    <li><a href="about.html" class="nav-links" id="active">über mich</a></li>
-                    <li><a href="work.html" class="nav-links">referenzen</a></li>
-                    <li><a href="service.html" class="nav-links">leistungen</a></li>
-                    <li><a href="contact.html" class="nav-links">kontakt</a></li>
-                </ul>
-            </nav>
-            <footer>
-                <a href="imprint.html" class="footer-links">Impressum</a>
-                <span class="deco-and">&amp;</span>
-                <a href="privacy.html" class="footer-links">Datenschutz</a>
-            </footer>
-        </div>
-    </div>
+
 
     <!--< Aside-Navigations-Element >-->
-    <aside id="nav-left" class="box-shadow-global w">
-       <a href="index.html">
-           <div id="logo-holder" class="col-8">
-                <img id="logo" src="img/Logo.png" alt="Logo">
-            </div>
-        </a>
-        <div class="col-8 link-holder">
-            <nav>
-                <ul>
-                    <li><a title="Home" href="index.html" class="nav-links">home</a></li>
-                    <li><a title="Über mich" href="about.html" class="nav-links" id="active">über mich</a></li>
-                    <li><a title="Referenzen" href="work.html" class="nav-links">referenzen</a></li>
-                    <li><a title="Leistungen" href="service.html" class="nav-links">leistungen</a></li>
-                    <li><a title="Kontakt" href="contact.html" class="nav-links">kontakt</a></li>
-                </ul>
-            </nav>
-            <footer>
-                <a title="Impressum" href="imprint.html" class="footer-links">Impressum</a>
-                <span class="deco-and">&</span>
-                <a title="Datenschutz" href="privacy.html" class="footer-links">Datenschutz</a>
-            </footer>
+    <nav id="nav">
+        <ul>
+            <li><a href='#'>Linkname</a></li>
+        </ul>
+
+        <div id="quick-contact">
+
+            Projektanfragen und Kontakt: <a href="mailto:hello@fabianr.de">hello@fabianr.de</a>
         </div>
-    </aside>
+        <div id="inner-footer">
+            <ul>
+                <li>Urheberrecht Fabian Rauer</li>
+            </ul> 
+        </div>
+    </nav>
+    <!--< NAV-HOLDER>-->
+    <div id="nav-holder">
+        <ul>
+            <li>
+
+            </li>
+        </ul>
+    </div>
 
     <!--< Content-Window-Viewer >-->
     <section id="content-i" class="">
@@ -88,7 +72,7 @@
         <!--< Top-Bar >-->
         <div id="top-bar" class="col-9">
              <a title="Schreib mir eine E-Mail" href="mailto:hello@fabianr.de" id="mail" class="material-icons box-shadow-global">mail_outline</a>
-            <button onclick="toggleMenu()" id="bb-btn" class="hamburger hamburger--minus" type="button">
+             <button onclick="toggleMenu()" id="bb-btn" class="hamburger hamburger--minus toogle" type="button">
                 <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
                 </span>

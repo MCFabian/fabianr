@@ -35,30 +35,35 @@
 
 </head>
 <body class="col-12 home">
+    <div id="overlay"></div>
     <!--< Aside-Navigations-Element >-->
-    <aside id="nav-left" class="box-shadow-global">
-       <a href="index.html">
-           <div id="logo-holder" class="col-8">
-                <img id="logo" src="img/Logo.png" alt="Logo">
-            </div>
-        </a>
-        <div class="col-8 link-holder">
-            <nav>
-                <ul>
-                    <li><a title="Home" href="index.html" class="nav-links" id="active">home</a></li>
-                    <li><a title="Über mich" href="about.html" class="nav-links" >über mich</a></li>
-                    <li><a title="Referenzen" href="work.html" class="nav-links">referenzen</a></li>
-                    <li><a title="Leistungen" href="service.html" class="nav-links">leistungen</a></li>
-                    <li><a title="Kontakt" href="contact.html" class="nav-links">kontakt</a></li>
-                </ul>
-            </nav>
-            <footer>
-                <a title="Impressum" href="imprint.html" class="footer-links">Impressum</a>
-                <span class="deco-and">&</span>
-                <a title="Datenschutz" href="privacy.html" class="footer-links">Datenschutz</a>
-            </footer>
+    <nav id="nav">
+        <ul>
+            <li><a href='#'>Linkname</a></li>
+        </ul>
+
+        <div id="quick-contact">
+
+            Projektanfragen und Kontakt: <a href="mailto:hello@fabianr.de">hello@fabianr.de</a>
         </div>
-    </aside>
+        <div id="inner-footer">
+            <ul>
+                <li>Urheberrecht Fabian Rauer</li>
+            </ul> 
+        </div>
+    </nav>
+    <!--< NAV-HOLDER>-->
+    <div id="nav-holder">
+        <ul>
+            <li>
+                <button onclick="toggleMenu()" id="bb-btn" class="hamburger hamburger--minus toogle" type="button">
+                    <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </li>
+        </ul>
+    </div>
     <!--< Content-Window-Viewer >-->
     <section id="content" class="">
         <!--< BG-IMG-START >-->

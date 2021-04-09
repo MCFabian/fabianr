@@ -324,7 +324,6 @@ h1.error {
 
 .link-holder {
     margin: auto;
-    margin-top: 80%;
 }
 
 nav {
@@ -358,7 +357,7 @@ ul {
 /*--------------------Mobile-Nav--------------------*/
 
 #bb-btn {
-    display: none;
+
     background: #171717;
     float: right;
     margin-top: 30px;
@@ -656,13 +655,7 @@ p.breadcrump-text {
 }
 
 #content-i {
-    background: transparent;
-    padding: 0 !important;
-    margin: 0;
-    float: right;
-    height: 100%;
-    width: 75%;
-    animation: fadein 0.4s;
+
  }
 
 /*----------------------------------------Service---------------------------------------*/
