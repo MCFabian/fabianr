@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+        <meta http-equiv="refresh" content="180">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+
+    * {
+        margin: 0;
+    }
+
+    body {
+        overflow: hidden;
+        height: 1080px;
+        width: 1920px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .layer {
+        background-color: #ff4200;
+        height: 1080px;
+        width: 1920px;
+        position: relative;
+    }
+
+    .game-image {
+        background-image: url("hhttps://verwaltung.fabianr.de/1920.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        opacity: 0.15;
+        animation: game infinite 8s;
+    }
+
+    .host {
+        width: 430px;
+        height: 105px;
+        position: relative;
+        left: -460px;
+        top: 20%;
+        z-index: 1;
+        background: linear-gradient(90deg, rgba(19,85,156,1) 0%, rgba(19,85,156,1) 33%, rgba(0,62,128,1) 33%, rgba(0,62,128,1) 100%);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        animation: in-host, in-host, in-host;
+        animation-delay: 1s, 30s, 60s, 90s, 120s;
+        animation-duration: 5s;
+    }
+
+    .game-in {
+        width: 430px;
+        height: 105px;
+        position: relative;
+        left: -460px;
+        top: 25%;
+        z-index: 1;
+        background: linear-gradient(90deg, #79dfb1 0%, #79dfb1 33%, #52c08f 33%, #52c08f 100%);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        animation: in-host, in-host, in-host;
+        animation-delay: 20s, 100s, 180s;
+        animation-duration: 5s;
+    }
+    
+    .elena {
+        height: 140px;
+        width: 142px;
+        position: absolute;
+        left: 6px;
+        bottom: 10px;
+        background-image: url("https://www.fabianr.de/elena.png");
+        background-repeat: no-repeat;
+    }
+
+    .fabian {
+        height: 150px;
+        width: 142px;
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        background-image: url("https://www.fabianr.de/fabian.png");
+        background-repeat: no-repeat;
+    }
+
+    .game-logo {
+        height: 97px;
+        width: 142px;
+        position: absolute;
+        bottom: 5px;
+        left: 20px;
+        background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ddf6be48-27fe-45f5-89e7-487f583a19cb/dd20lt9-bc9adcfc-d7ad-4b71-b1f2-366fd23bddc2.png/v1/fill/w_894,h_894,strp/the_division_2_logo_transparent_by_mysterymaxx_dd20lt9-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjA0OCIsInBhdGgiOiJcL2ZcL2RkZjZiZTQ4LTI3ZmUtNDVmNS04OWU3LTQ4N2Y1ODNhMTljYlwvZGQyMGx0OS1iYzlhZGNmYy1kN2FkLTRiNzEtYjFmMi0zNjZmZDIzYmRkYzIucG5nIiwid2lkdGgiOiI8PTIwNDgifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.PZyC5NVL7JjSA39AFeRbAeu2QzjA6gFeiEwzkW35Sok");
+        background-repeat: no-repeat;
+    }
+
+    .text {
+        color: #fff;
+        font-size: 1.3rem;
+        line-height: 1;
+        margin-left: 160px;
+        padding-top: 25px;
+
+    }
+
+    .text>strong {
+        font-size: 2.2rem;
+    }
+
+
+    @keyframes game {
+        0% {transform: scale(1);}
+        50% {transform: scale(1.2);}
+        100% {transform: scale(1);}
+    }
+
+    @keyframes in-host {
+        0%, 60%, 75%, 90%, 100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        }
+        0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-3000px, 0, 0);
+        transform: translate3d(-3000px, 0, 0);
+        left: -460px;
+        }
+        30% {
+        opacity: 1;
+        -webkit-transform: translate3d(25px, 0, 0);
+        transform: translate3d(25px, 0, 0);
+        left: 0px;
+        }
+        40% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+        }
+        45% {
+        -webkit-transform: translate3d(5px, 0, 0);
+        transform: translate3d(5px, 0, 0);
+        }
+        50% {
+        -webkit-transform: none;
+        transform: none;
+        }
+        60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0px, 0, 0);
+        transform: translate3d(0px, 0, 0);
+        }
+
+        80% {
+        opacity: 1;
+        -webkit-transform: translate3d(0px, 0, 0);
+        transform: translate3d(0px, 0, 0);
+        }
+        85% {
+        opacity: 1;
+        -webkit-transform: translate3d(20px, 0, 0);
+        transform: translate3d(20px, 0, 0);
+        left: 0px;
+        }
+        100% {
+        opacity: 0;
+        -webkit-transform: translate3d(-2000px, 0, 0);
+        transform: translate3d(-2000px, 0, 0);
+        left: -460px;
+        }
+
+        } 
+
+</style>
+
+<body onload="">
+    <div class="game-in">
+        <div class="text">Heute spielen wir: <br> <strong>Dauntless</strong></div>
+        <div class="game-logo"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+@charset "utf-8";
+/* CSS Document */
+
+.work-img {
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  animation: bild;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+.project-img-bg {
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  animation: bild;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+/* Projekte */
+
+/* Projekt 1 - Spotify */
+#project-thumb-1-1 {
+  background-image: url("../img/projects/p1/thumb.jpg");
+}
+
+#project-thumb-1-2 {
+  background-image: url("../img/projects/p1/thumb2.jpg");
+}
+
+#project-1-bg {
+  background-image: url("../img/projects/p1/project-1.jpg");
+}
+
+
+/* Projekt 2 - Summer Opening 2017 */
+
+#project-thumb-2-1 {
+  background-image: url("../img/projects/p2/thumb.jpg");
+}
+
+#project-thumb-2-2 {
+  background-image: url("../img/projects/p2/thumb2.jpg");
+}
+
+#project-2-bg {
+  background-image: url("../img/projects/p2/project-2.jpeg");
+}
+
+.turn-around-model #front-side-so {
+  background: url("../img/projects/p2/front.jpg")  no-repeat;
+  background-size: contain;
+}
+
+.turn-around-model #back-side-so {
+  background: url("../img/projects/p2/back.jpg")  no-repeat;
+  background-size: contain;
+}
+
+
+/* Projekt 3 - Typografie */
+#project-thumb-3-1 {
+  background-image: url("../img/projects/p3/thumb.jpg");
+}
+
+#project-thumb-3-2 {
+  background-image: url("../img/projects/p3/thumb2.jpg");
+}
+
+#project-3-bg {
+  background-image: url("../img/projects/p3/typo-bg.jpg");
+}
+
+
+/* Projekt 4 */
+#project-thumb-4-1 {
+  background-image: url("../img/projects/p4/thumb.png");
+}
+
+#project-thumb-4-2 {
+  background-image: url("../img/projects/p4/thumb2.png");
+}
+
+#project-4-bg {
+  background-image: url("../img/projects/p4/sommerblüte-bg.jpg");
+}
+
+/* Projekt 5 - Gym-Lau-Identity */
+#project-thumb-5-1 {
+  background-image: url("../img/projects/p5/thumb.jpg");
+}
+
+#project-thumb-5-2 {
+  background-image: url("../img/projects/p5/thumb2.png");
+}
+
+.project-5-bg {
+  background-image: url("../img/projects/p5/project-5.JPG");
+}
+
+/* Projekt 6 */
+#project-thumb-6-1 {
+  background-image: url("../img/projects/p6/thumb.jpg");
+}
+
+#project-thumb-6-2 {
+  background-image: url("../img/projects/p6/thumb2.jpg");
+}
+
+#project-6-bg {
+  background-image: url("../img/projects/p6/project-6.png");
+}

@@ -1,0 +1,7 @@
+ErrorDocument 404 /error_docs/not_found.html 
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule (.*) $1.html
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule (.*) $1.php

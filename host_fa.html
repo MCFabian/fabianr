@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <meta http-equiv="refresh" content="250">  
+</head>
+
+<style>
+
+    * {
+        margin: 0;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    .container {
+        width: 100rem;
+        height: 10rem;
+        padding: 15px;
+        background-image: url("host_fa.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        bottom: 4rem;
+        position: absolute;
+    }
+
+    .slideInRight {
+        animation-name: slideInRight;
+        animation-duration: 10s;
+        animation-fill-mode: both;
+        animation-iteration-count: 1;
+        animation-delay: 60s;
+    }
+
+  @keyframes slideInRight {
+  0% {
+  transform: translateY(132%);
+  visibility: visible;
+  }
+  10% {
+  transform: translateY(0);
+  }
+
+  90% {
+  transform: translateY(0);
+  }
+
+  100% {
+  transform: translateY(132%);
+  }
+  } 
+
+</style>
+
+<body>
+    <div class="container slideInRight">
+
+    </div>
+</body>
+</html>
