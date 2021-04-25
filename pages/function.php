@@ -53,9 +53,9 @@
 
     function menu(){
 
-        $home = "<a href='#' title='#'>Home</a>";
-        $about = "<a href='work.php' title='Arbeiten'>Arbeiten</a>";
-        $work = "<a href='#' title='#'>Home</a>";
+        $home = "<a href='index.php' title='#'>Home</a>";
+        $imprint = "<a href='imprint.html' title='Impressum'>Impressum</a>";
+        $privacy = "<a href='privacy.html#' title='Datenschutz'>Datenschutz</a>";
 
         echo"
             <!--< OVERLAY >-->
@@ -77,8 +77,8 @@
             <nav id='nav'>
                 <ul>
                     <li>$home</li>
-                    <li>$about</li>
-                    <li>$work</li>
+                    <li>$imprint</li>
+                    <li>$privacy</li>
                 </ul>
         
                 <div id='quick-contact'>
@@ -266,7 +266,7 @@
     function footer(){
         echo"
             <footer>
-                footer
+
             </footer>
         ";
     }
