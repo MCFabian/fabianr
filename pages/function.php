@@ -2,7 +2,7 @@
 
     include_once 'connection.php';
 
-    function writehead($pagename){
+    function writehead($pagename, $active){
         echo"
             <head>
                 <!-- <titel> -->
@@ -40,7 +40,6 @@
                 <link rel='stylesheet' type='text/css' href='css/page.css'>
 
                 <link rel='stylesheet' type='text/css' href='css/hamburger.css'>
-                <link rel='stylesheet' type='text/css' href='css/procjects.css'>
             
                 <!--< Java Scripts Einbindungen >-->
                 <script language='javascript' type='text/javascript' src='js/bb.js'></script>
@@ -48,14 +47,20 @@
             </head>
         ";
 
-        menu();
+        menu($active);
     }   
 
-    function menu(){
+    function menu($active){
 
         $home = "<a href='index.php' title='#'>Home</a>";
-        $imprint = "<a href='imprint.html' title='Impressum'>Impressum</a>";
-        $privacy = "<a href='privacy.html#' title='Datenschutz'>Datenschutz</a>";
+        $imprint = "<a href='impressum.php' title='Impressum'>Impressum</a>";
+        $privacy = "<a href='datenschutz.php' title='Datenschutz'>Datenschutz</a>";
+
+        if(!isset($active)){echo"Nothing active";}
+        if($active == 1){$home = "<a class='activemenu' href='index.php' title='#'>Home</a>";}
+        if($active == 2){ $imprint = "<a class='activemenu' href='impressum.php' title='Impressum'>Impressum</a>";}
+        if($active == 3){ $privacy = "<a class='activemenu' href='datenschutz.php' title='Datenschutz'>Datenschutz</a>";}
+
 
         echo"
             <!--< OVERLAY >-->
@@ -93,174 +98,7 @@
         ";
     }
 
-    function productsnew() {
-
-        echo"";
-
-        global $connection;
-        //SQL-Zugriff auf Datensaetze
-        $query = $connection->prepare("SELECT cms_projects.id AS id, cms_projects.path, cms_projects.cover, cms_projects.cover, cms_projects.headline, cms_projects.subheadline, T_Types.name AS 'type', T_Clients.name AS 'client' FROM cms_projects, T_Clients, T_Types WHERE cms_projects.client = T_Clients.p_client_nr AND cms_projects.type = T_Types.p_type_nr AND cms_projects.active = 1");
-        $query->execute();
-        $query->setFetchMode(PDO::FETCH_ASSOC);
-
-        while ($row = $query->fetch()){
-
-            $headline = $row['headline'];
-            $subheadline		= $row['subheadline'];
-            $type		= $row['type'];
-            $path		= $row['path'];
-            $cover		= $row['cover'];
-            $client		= $row['client'];
-            $id         = $row['id'];
-
-            if(empty($id)) {
-                include_once "pages/404.php";
-            }
-
-            else {
-                echo "
-                <div title='$headline' onclick=\"location.href='project.php?id=$id'\" class='box--new'>
-                    <div class='box-inner-new'>
-                        <img src='src/$path$cover' alt='$headline'>
-                    </div>
-                    <strong>$headline</strong> <br> <small>$subheadline</small>
-                </div>";
-            }
-        }
-
-    }; //Ende der WHILE-Schleife
-
-    function viewernew (string $projectid){
-        global $connection;
-        //SQL-Zugriff auf Datensaetze
-        $query = $connection->prepare("SELECT cms_projects.cover AS coverimg, cms_projects.headline, cms_projects.subheadline, T_Clients.name AS pclient, T_Types.name AS ptype, DATE_FORMAT(cms_projects.onlinedate, '%d.%m.%Y') AS onlinedate, cms_projects.projecttext, cms_projects.hint, cms_projects.path, cms_projects.path, cms_projects.img1, cms_projects.img2, cms_projects.img3, cms_projects.img4, cms_projects.img5, cms_projects.img6 FROM cms_projects, T_Types, T_Clients WHERE cms_projects.type = T_Types.p_type_nr AND cms_projects.client = T_Clients.p_client_nr AND cms_projects.id = $projectid;");
-        
-        $query->execute();
-        $query->setFetchMode(PDO::FETCH_ASSOC); 
-    
-        while ($row = $query->fetch()){
-    
-            $headline = $row['headline'];
-            $subheadline = $row['subheadline'];
-            $type		= $row['ptype'];
-            $path		= $row['path'];
-            $cover		= $row['coverimg'];
-            $client		= $row['pclient'];
-            $date		= $row['onlinedate'];
-            $text = $row['projecttext'];
-            $hint = $row['hint'];
-            $img1 = $row['img1'];
-            $img2 = $row['img2'];
-            $img3 = $row['img3'];
-            $img4 = $row['img4'];
-            $img5 = $row['img5'];
-            $img6 = $row['img6'];
-
-            echo "
-
-            <head>
-                <title>$headline</title>
-            </head>";
-
-
-            echo "
-            <div class=\"flex row rowrewerse\">
-                <div class=\"col-6\">
-                    <div class=\"coverimage\">
-                        <img src=\"src/$path$img1\" alt='$headline'>
-                    </div>";
-
-                    if($img2 == "0") 
-                    {
-                    echo "";
-                    } 
-                    else 
-                    {
-                    echo "<img class='projectimage' src='src/$path$img2' alt='$headline'>";
-                    }
-
-                    if($img3 == "0") 
-                    {
-                    echo "";
-                    } 
-                    else 
-                    {
-                    echo "<img class='projectimage' src='src/$path$img3' alt='$headline'>";
-                    }
-
-                    if($img4 == "0") 
-                    {
-                    echo "";
-                    } 
-                    else 
-                    {
-                    echo "<img class='projectimage' src='src/$path$img4' alt='$headline'>";
-                    }
-
-                    if($img5 == "0") 
-                    {
-                    echo "";
-                    } 
-                    else 
-                    {
-                    echo "<img class='projectimage' src='src/$path$img5' alt='$headline'>";
-                    }
-
-                    if($img6 == "0") 
-                    {
-                    echo "";
-                    } 
-                    else 
-                    {
-                    echo "<img class='projectimage' src='src/$path$img6' alt='$headline'>";
-                    }
-
-                echo "
-                </div>
-                <div class=\"col-4\">
-                    <ul class=\"vita copy--large \">
-                        <li><strong>$headline</strong></li>
-                        <li class=\"darkgrey\">$subheadline
-                            <p class=\"grey contenttext nocols margin0\">
-                            $text
-                            </p>
-                        </li>
-                        <li>
-                            <p class=\"darkgrey contenttext nocols margin0\">
-                                <strong>Typ: </strong>$type <br>
-                                <strong>Klient: </strong>$client <br>
-                                <strong>Erscheinungsdatum: </strong>$date";  
-                                echo"
-                                <br>
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            "; 
-
-            if($hint == "") 
-            {
-            echo "";
-            } 
-            else {
-            echo "<p class='hint'><strong>Hinweis</strong>$hint</p>";
-            }
-
-            echo "
-                <div class='project-question'>
-                    <p>Du hast Interesse dein Projekt zusammen mit mir zu verwirklichen? Schreib mir doch eine E-Mail oder Frage nach einer unverbindlichen Preisanfrage.</p>
-                    <a class='link' href='mailto:hello@fabianr.de?subject=Projektanfrage: Dein Betreff hier'>Projekt anfragen</a>
-                    <a href='index.php' class='link'>Mehr Projekte ansehen</a>
-                </div>
-            ";
-
-
-           
-        }
-    
-    
-        };
+   
 
 
     function footer(){

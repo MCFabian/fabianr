@@ -1,17 +1,15 @@
+<!DOCTYPE html>
+
 <?php include_once 'pages/function.php'; ?>
 
-<?php writehead("fabianr.de - work"); ?>
+<?php writehead("fabianr.de - home", 1); ?>
 
 <body>
-
-    <main>
-        <div class="">
+    <main class="slide-in-fwd-center center-container">
+        <div >
             <h1 class="center">Nix zu sehen hier.</h1>
             <p class="center copy--large">Die Webseite wurde abgeschaltet.</p>
         </div>
     </main>
-
-    <!-- INCLUDE FOOTER -->
-    <?php footer(); ?> 
 </body>
 
