@@ -21,9 +21,6 @@
                 <br><br>
                 Die verantwortliche Stelle entscheidet allein über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, Kontaktdaten o. Ä.).
                 <br><br>
-                <strong class="data">Umsatzsteuer-Identifikations-Nr. gemäß § 27a</strong><br>
-                DE322759979
-                <br><br>
                 <strong class="data">Bild- und Videomaterial</strong>
                 <br>
                 Das Urheberrecht des hier ausgestellten Video- als auch Bildmaterial unterliegt allein Fabian Rauer.
