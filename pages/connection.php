@@ -1,0 +1,13 @@
+
+<?php 
+    /*  ONLY WORKING ON DOMAIN    */
+    $servername = "127.0.0.1:3306";
+    $username = "root";
+    $password = "";
+
+/*     $username = "Web";
+    $password = "W_9bdb23"; */
+
+    $database = "mainstage"; 
+    $connection = new PDO("mysql:host=$servername; dbname=$database; charset=utf8", $username, $password);
+?>

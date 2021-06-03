@@ -1,0 +1,158 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* MAIN ELEMENTS ------------------------------------------------------------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+h1 {
+  font-size: 4.5rem;
+  text-transform: none;
+  color: #032541;
+}
+
+h2 {
+  font-size: 4rem;
+  text-transform: none;
+}
+
+h3 {
+  font-size: 2rem;
+  text-transform: none;
+}
+
+button {
+  background: none;
+}
+
+.center-container {
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: row;
+  height: calc(100% - 105px);
+
+
+  padding: 20px;
+
+}
+
+.center-container > div {
+  margin: auto;
+}
+
+
+
+
+
+
+
+#page-title {
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 1.6rem;
+  margin: auto;
+}
+
+
+.grey {
+  color: #888ea0 !important;
+}
+
+.darkgrey {
+  color: #2E3047 !important;
+}
+
+
+#wrapper {
+  max-width: 2000px;
+  margin: auto;
+}
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------------- General Items */
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------------- Icon Settings */
+
+.breadcrump-text-dark {
+  font-size: 1.4rem;
+  color: #2E3047;
+  width: 50%;
+  margin: auto;
+}
+
+.breadcrump-text-dark ul {
+  list-style-position: inside;
+}
+
+a {
+  text-decoration: none;
+  color: #155d97;
+  transition: 0.2s color;
+}
+
+a:hover {
+  color: #0f4d80;
+}
+
+
+.copy--large {
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #2E3047;
+}
+
+
+.center {
+  text-align: center;
+}
+
+
+
+.slide-in-fwd-center {
+	-webkit-animation: slide-in-fwd-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: slide-in-fwd-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation-delay: 0.3s;
+}
+
+
+@keyframes slide-in-fwd-center {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

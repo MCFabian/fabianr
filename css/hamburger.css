@@ -1,0 +1,334 @@
+/* ----------------------------------------------------------------------------------------------------------- BurgerStyles */
+
+.hamburger {
+  padding: 16px 14px 12px 12px;
+  z-index: 5;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.4s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.hamburger:hover {
+  opacity: 1;
+}
+
+.hamburger.is-active:hover {
+  opacity: 1;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #393741; 
+}
+
+.hamburger-box {
+  width: 30px;
+  height: 22px;
+  display: inline-block;
+  position: relative; 
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  width: 30px;
+  margin-top: -2px;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  height: 3px;
+  background-color: #817e8a;
+  border-radius: 0px;
+  position: absolute;
+  transition-property: transform;
+  transition: background 0.4s;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  width: 30px;
+  display: block; 
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+.hamburger-box:hover>.hamburger-inner, .hamburger-box:hover>.hamburger-inner::before, .hamburger-box:hover>.hamburger-inner::after {
+  background: #393741;
+}
+
+
+.hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+}
+
+.hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
+  opacity: 0;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+}
+
+.hamburger--minus.is-active .hamburger-inner::before {
+  top: 0; 
+}
+
+.hamburger--minus.is-active .hamburger-inner::after {
+  bottom: 0;
+}
+
+
+    
+/* ----------------------------------------------------------------------------------------------------------- NAV Settings */
+
+#nav-holder {
+  padding: 35px 75px;
+  z-index: 3;
+  position: fixed;
+  width: calc(100% - 150px);
+  left: 0;
+}
+
+#nav-holder>ul>a::after {
+  display: none;
+}
+
+#nav-holder>ul {
+  display: flex;
+  flex-direction: row;
+  z-index: 3;
+}
+
+#nav-holder>ul>li {
+  list-style: none;
+  margin: auto 0 auto auto;
+  padding: 0 15px;
+}
+
+#nav-holder>ul>li>a {
+  font-size: 1.3rem;
+  vertical-align: middle;
+  font-weight: 600;
+  transition: color 0.5s;
+  color: #817e8a;
+}
+#nav-holder>ul>li>a:hover, .activemenu {
+  color: #393741;
+}
+
+nav, #nav {
+  background: rgb(255,255,255);
+  background: -moz-linear-gradient(-45deg,  rgba(255,255,255,1) 0%, rgba(242,242,242,1) 100%);
+  background: -webkit-linear-gradient(-45deg,  rgba(255,255,255,1) 0%,rgba(242,242,242,1) 100%);
+  background: linear-gradient(135deg,  rgba(255,255,255,1) 0%,rgba(242,242,242,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=1 );
+  box-shadow: 0px 0px 32px 0px rgba(165, 165, 165, 0.3);
+  transition: 0.4s;
+  z-index: 2;
+  flex-direction: column;
+  right: 0;
+  top: 0;
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  width: 500px;
+  height: 100%;
+  padding: 0 75px;
+  display: flex;
+}
+
+nav>ul {
+  padding: 75px 0 0 0 !important;
+}
+
+#quick-contact {
+  margin: auto auto 0 auto !important;
+}
+
+#inner-footer {
+  padding: 20px 0 !important;
+}
+
+#inner-footer>ul>li>a::before {
+  content: "" !important;
+}
+
+.nav-active {
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+
+nav>ul {
+  list-style: none;
+  position: relative;
+  width: 100%;
+  margin: auto auto 0 auto;
+}
+
+nav>ul>li {
+  padding: 10px 0;
+}
+
+nav>ul>li>a {
+  font-size: 2.8rem;
+  font-family: 'Source Sans Pro';
+  color: #888ea0;
+  font-weight: 600;
+  transition: color 0.5s;
+  letter-spacing: 0px;
+}
+
+nav>ul>li>a:hover, .activemenu {
+  color: #393741;
+}
+
+nav>ul>li>a::after {
+  width: 0;
+}
+
+nav>ul>li>a:hover::after, .activemenu::after {
+  height: 4px;
+  width: 45%;
+}
+
+nav>ul>li>a::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 4px;
+  background-color: #393741;
+  bottom: -5px;
+  left: 0;
+  margin: 0;
+  transition: width 0.5s;
+}
+
+#active {
+  color: var(--active);
+  position: relative;
+}
+
+#active::after {
+  position: absolute;
+  content: "";
+  width: 45%;
+  height: 4px;
+  background-color: var(--active);
+  bottom: -5px;
+  left: 0;
+  margin: 0;
+  transition: width 0.5s;
+}
+
+#overlay {
+  display: block;
+  transition: opacity 0.4s;
+}
+
+.overlay-active {
+  opacity: 1 !important;
+  background: rgba(165, 165, 165, 0.3);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
+.overlay-black {
+  background: rgba(190, 190, 190, 0.6);
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: background 0.5s;
+}
+
+#quick-contact {
+  border-top: 1px solid #dadada;
+  border-bottom: 1px solid #dadada;
+  padding: 20px 0px;
+  position: relative;
+  vertical-align: middle;
+  font-weight: 600;
+  bottom: 0;
+  width: 100%;
+  margin: auto auto 0px auto;
+  color: #888ea0;
+}
+
+#quick-contact>i {
+  color: #888ea0;
+  font-size: 1.3rem;
+  padding-right: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  vertical-align: middle;
+}
+
+#quick-contact>a {
+  color: var(--active);
+  font-weight: 400;
+  transition: margin 0.4s;
+}
+
+#quick-contact>a:hover {
+  margin-left: 5px;
+}
+
+#quick-contact>a::after {
+  position: relative;
+}
+
+#inner-footer {
+  padding: 20px 0px 40px 0;
+  color: #888ea0;
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 2rem;
+}
+
+#inner-footer>ul>li {
+  list-style: none;
+  float: left;
+  color: #888ea0;
+  margin-right: 15px;
+}
+
+#inner-footer>ul>li>a {
+  color: #888ea0;
+  transition: 0.4s color;
+}
+
+#inner-footer>ul>li>a:hover {
+  color: var(--active);
+}
+
+#inner-footer>ul>li>a::after {
+  position: relative;
+}
+
+/* ----------------------------------------------------------------------------------------------------------- Resp Settings */
+
+@media (max-width: 1000px) {
+  nav, #nav {
+    width: calc(100% - 150px);
+    padding: 0 75px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav, #nav {
+    width: calc(100% - 150px);
+    padding: 0 75px;
+  }
+}
