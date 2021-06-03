@@ -67,7 +67,6 @@
   bottom: -10px;
 }
 
-
 .hamburger-box:hover>.hamburger-inner, .hamburger-box:hover>.hamburger-inner::before, .hamburger-box:hover>.hamburger-inner::after {
   background: #393741;
 }
