@@ -2,8 +2,8 @@
 <?php 
     /*  ONLY WORKING ON DOMAIN    */
     $servername = "127.0.0.1:3306";
-    $username = "root";
-    $password = "";
+    $username = "Web";
+    $password = "W_9bdb23";
 
 /*     $username = "Web";
     $password = "W_9bdb23"; */
